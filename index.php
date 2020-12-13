@@ -34,7 +34,9 @@ if ($err) {
 	echo $response;
 }
 
-echo "<br>OUTPUT: ".$array["id"];
+$data = array($response);
+
+echo "<br>OUTPUT: ".$data["category"];
 
 ?>
 <html>
