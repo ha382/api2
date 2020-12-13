@@ -3,7 +3,7 @@
 $curl = curl_init();
 
 curl_setopt_array($curl, [
-	CURLOPT_URL => "https://quantaex-market-data.p.rapidapi.com/api/v2/peatio/public/markets/tickers",
+	CURLOPT_URL => "https://tickerval.p.rapidapi.com/default/echoHandler",
 	CURLOPT_RETURNTRANSFER => true,
 	CURLOPT_FOLLOWLOCATION => true,
 	CURLOPT_ENCODING => "",
@@ -12,7 +12,7 @@ curl_setopt_array($curl, [
 	CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
 	CURLOPT_CUSTOMREQUEST => "GET",
 	CURLOPT_HTTPHEADER => [
-		"x-rapidapi-host: quantaex-market-data.p.rapidapi.com",
+		"x-rapidapi-host: tickerval.p.rapidapi.com",
 		"x-rapidapi-key: cac42a454bmsh9b2be104a7413e4p1375bbjsnf2c2f7878e3a"
 	],
 ]);
@@ -27,7 +27,4 @@ if ($err) {
 } else {
 	echo $response;
 }
-
-echo "<br>OUTPUT:"."<br>".$response;
-
 ?>
