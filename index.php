@@ -25,7 +25,10 @@ curl_close($curl);
 if ($err) {
 	echo "cURL Error #:" . $err;
 } else {
-	echo $response;
+	echo "<br>". $response[0][author];
+	echo "<br>". $response[0][category];
+	echo "<br>". $response[0][id];
+	echo "<br>". $response[0][text];
 }
 
 
