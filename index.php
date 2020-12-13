@@ -3,7 +3,7 @@
 $curl = curl_init();
 
 curl_setopt_array($curl, [
-	CURLOPT_URL => "https://pexelsdimasv1.p.rapidapi.com/v1/curated?page=1&per_page=15",
+	CURLOPT_URL => "https://url-to-pdf-jpeg-or-png.p.rapidapi.com/api/generate?layout=landscape&url=https%3A%2F%2Fgoogle.com&size=A3&margin=0.1&format=pdf",
 	CURLOPT_RETURNTRANSFER => true,
 	CURLOPT_FOLLOWLOCATION => true,
 	CURLOPT_ENCODING => "",
@@ -12,8 +12,7 @@ curl_setopt_array($curl, [
 	CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
 	CURLOPT_CUSTOMREQUEST => "GET",
 	CURLOPT_HTTPHEADER => [
-		"authorization: undefined",
-		"x-rapidapi-host: PexelsdimasV1.p.rapidapi.com",
+		"x-rapidapi-host: url-to-pdf-jpeg-or-png.p.rapidapi.com",
 		"x-rapidapi-key: cac42a454bmsh9b2be104a7413e4p1375bbjsnf2c2f7878e3a"
 	],
 ]);
