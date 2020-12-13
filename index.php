@@ -25,7 +25,8 @@ curl_close($curl);
 if ($err) {
 	echo "cURL Error #:" . $err;
 } else {
-	echo $response['text'];
+	echo $response;
+	echo $response[3];
 }
 
 ?>
