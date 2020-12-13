@@ -3,7 +3,7 @@
 $curl = curl_init();
 
 curl_setopt_array($curl, [
-	CURLOPT_URL => "https://url-to-pdf-jpeg-or-png.p.rapidapi.com/api/generate?layout=landscape&url=https%3A%2F%2Fgoogle.com&size=A3&margin=0.1&format=pdf",
+	CURLOPT_URL => "https://famous-quotes4.p.rapidapi.com/random?count=2&category=all",
 	CURLOPT_RETURNTRANSFER => true,
 	CURLOPT_FOLLOWLOCATION => true,
 	CURLOPT_ENCODING => "",
@@ -12,7 +12,7 @@ curl_setopt_array($curl, [
 	CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
 	CURLOPT_CUSTOMREQUEST => "GET",
 	CURLOPT_HTTPHEADER => [
-		"x-rapidapi-host: url-to-pdf-jpeg-or-png.p.rapidapi.com",
+		"x-rapidapi-host: famous-quotes4.p.rapidapi.com",
 		"x-rapidapi-key: cac42a454bmsh9b2be104a7413e4p1375bbjsnf2c2f7878e3a"
 	],
 ]);
@@ -27,4 +27,5 @@ if ($err) {
 } else {
 	echo $response;
 }
+
 ?>
