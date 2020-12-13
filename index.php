@@ -3,7 +3,7 @@
 $curl = curl_init();
 
 curl_setopt_array($curl, [
-	CURLOPT_URL => "https://dark-sky.p.rapidapi.com/undefined,undefined?lang=en&units=auto",
+	CURLOPT_URL => "https://pexelsdimasv1.p.rapidapi.com/v1/curated?page=1&per_page=15",
 	CURLOPT_RETURNTRANSFER => true,
 	CURLOPT_FOLLOWLOCATION => true,
 	CURLOPT_ENCODING => "",
@@ -12,7 +12,8 @@ curl_setopt_array($curl, [
 	CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
 	CURLOPT_CUSTOMREQUEST => "GET",
 	CURLOPT_HTTPHEADER => [
-		"x-rapidapi-host: dark-sky.p.rapidapi.com",
+		"authorization: undefined",
+		"x-rapidapi-host: PexelsdimasV1.p.rapidapi.com",
 		"x-rapidapi-key: cac42a454bmsh9b2be104a7413e4p1375bbjsnf2c2f7878e3a"
 	],
 ]);
@@ -27,6 +28,4 @@ if ($err) {
 } else {
 	echo $response;
 }
-
-
 ?>
