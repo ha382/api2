@@ -28,11 +28,6 @@ if ($err) {
 	echo $response;
 }
 
-$json = file_get_contents($response);
-$output = json_decode($json, true);
-
-
-echo "<br>OUTPUT:"."<br>".$json[0];
-echo $output[0];
+echo "<br>OUTPUT:"."<br>".$response;
 
 ?>
