@@ -22,21 +22,13 @@ $err = curl_error($curl);
 
 curl_close($curl);
 
-
-
-// Will dump a beauty json :3
-var_dump(json_decode($response, true));
-$response = file_get_contents($curl);
-
 if ($err) {
 	echo "cURL Error #:" . $err;
 } else {
 	echo $response;
 }
 
-$data = array($response);
 
-echo "<br>OUTPUT: ".$data["category"];
 
 ?>
 <html>
