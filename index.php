@@ -3,7 +3,7 @@
 $curl = curl_init();
 
 curl_setopt_array($curl, [
-	CURLOPT_URL => "https://famous-quotes4.p.rapidapi.com/",
+	CURLOPT_URL => "https://famous-quotes4.p.rapidapi.com/random?count=2&category=all",
 	CURLOPT_RETURNTRANSFER => true,
 	CURLOPT_FOLLOWLOCATION => true,
 	CURLOPT_ENCODING => "",
@@ -27,5 +27,6 @@ if ($err) {
 } else {
 	echo $response;
 }
+
 
 ?>
