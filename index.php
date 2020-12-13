@@ -34,6 +34,8 @@ if ($err) {
 	echo $response;
 }
 
+echo "<br>OUTPUT: ".$array["id"];
+
 ?>
 <html>
     <head>
