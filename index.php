@@ -27,6 +27,7 @@ if ($err) {
 } else {
 	echo $response;
 	echo $response["text"];
+	echo $curl;
 }
 
 ?>
