@@ -26,8 +26,8 @@ if ($err) {
 	echo "cURL Error #:" . $err;
 } else {
 	echo $response;
-	echo "<br> \brOUTPUT" . $response["text"];
-	echo $curl;
+	echo "<br>OUTPUT" . $response[0]['text'];
+	echo $response[1]['text'];
 }
 
 ?>
