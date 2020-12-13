@@ -29,7 +29,7 @@ if ($err) {
 }
 
 
-echo "<br>".$response[0].author;
+echo "<br>".$response['author'];
 
 ?>
 <html>
