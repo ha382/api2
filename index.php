@@ -28,4 +28,10 @@ if ($err) {
 	echo $response;
 }
 
+$json = file_get_contents($response);
+$output = json_decode($json, true);
+
+echo "<br>".$json;
+echo $output;
+
 ?>
