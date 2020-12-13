@@ -27,7 +27,9 @@ if ($err) {
 	echo "cURL Error #:" . $err;
 } else {
 	echo $response;
-	echo "<br>OUTPUT" . $response[0]['text'];
+	echo "<br>OUTPUT" . $response['text'];
 }
+
+
 
 ?>
