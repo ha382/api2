@@ -1,10 +1,9 @@
 <?php
 
-$url = 'https://famous-quotes4.p.rapidapi.com/random?count=2&category=all';
-$curl = curl_init($url);
+$curl = curl_init();
 
 curl_setopt_array($curl, [
-	CURLOPT_URL => "https://famous-quotes4.p.rapidapi.com/random?count=2&category=all",
+	CURLOPT_URL => "https://famous-quotes4.p.rapidapi.com/",
 	CURLOPT_RETURNTRANSFER => true,
 	CURLOPT_FOLLOWLOCATION => true,
 	CURLOPT_ENCODING => "",
@@ -27,9 +26,6 @@ if ($err) {
 	echo "cURL Error #:" . $err;
 } else {
 	echo $response;
-	echo "<br>OUTPUT" . $response['text'];
 }
-
-
 
 ?>
