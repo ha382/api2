@@ -2,7 +2,6 @@
 
 $curl = curl_init();
 
-/*
 curl_setopt_array($curl, [
 	CURLOPT_URL => "https://famous-quotes4.p.rapidapi.com/random?count=2&category=all",
 	CURLOPT_RETURNTRANSFER => true,
@@ -17,14 +16,9 @@ curl_setopt_array($curl, [
 		"x-rapidapi-key: cac42a454bmsh9b2be104a7413e4p1375bbjsnf2c2f7878e3a"
 	],
 ]);
-*/
-
-curl_setopt($ch, CURLOPT_URL, "https://famous-quotes4.p.rapidapi.com/random?count=2&category=all");
-curl_setopt($ch, CURLOPT_HEADER, 0);
 
 $response = curl_exec($curl);
 $err = curl_error($curl);
-curl_exec($ch);
 
 curl_close($curl);
 
@@ -32,8 +26,7 @@ if ($err) {
 	echo "cURL Error #:" . $err;
 } else {
 	echo $response;
-	echo "<br>OUTPUT" . $response[0]['text'];
-	echo $response[1]['text'];
+	echo "<br>OUTPUT" . $response[0][text];
 }
 
 ?>
