@@ -1,6 +1,7 @@
 <?php
 
-$curl = curl_init();
+$url = 'https://famous-quotes4.p.rapidapi.com/random?count=2&category=all';
+$curl = curl_init($url);
 
 curl_setopt_array($curl, [
 	CURLOPT_URL => "https://famous-quotes4.p.rapidapi.com/random?count=2&category=all",
@@ -26,7 +27,7 @@ if ($err) {
 	echo "cURL Error #:" . $err;
 } else {
 	echo $response;
-	echo "<br>OUTPUT" . $response[0][text];
+	echo "<br>OUTPUT" . $response[0]['text'];
 }
 
 ?>
