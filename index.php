@@ -1,44 +1,24 @@
-<?php
-
-$curl = curl_init();
-
-curl_setopt_array($curl, [
-	CURLOPT_URL => "https://famous-quotes4.p.rapidapi.com/random?count=2&category=all",
-	CURLOPT_RETURNTRANSFER => true,
-	CURLOPT_FOLLOWLOCATION => true,
-	CURLOPT_ENCODING => "",
-	CURLOPT_MAXREDIRS => 10,
-	CURLOPT_TIMEOUT => 30,
-	CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-	CURLOPT_CUSTOMREQUEST => "GET",
-	CURLOPT_HTTPHEADER => [
-		"x-rapidapi-host: famous-quotes4.p.rapidapi.com",
-		"x-rapidapi-key: cac42a454bmsh9b2be104a7413e4p1375bbjsnf2c2f7878e3a"
-	],
-]);
-
-$response = curl_exec($curl);
-$err = curl_error($curl);
-
-curl_close($curl);
-
-if ($err) {
-	echo "cURL Error #:" . $err;
-} else {
-	echo $response;
-}
-
-
-
-?>
 <html>
-    <head>
-
-    </head>
-    <body>
-        <form action="">
-            <input type="text" name="location"/>
-            <button type="submit">submit</button>
-        </form>
-    </body>
+  <body>
+    <ul>
+      <?php 
+        $data = file_get_contents("https://api.thecatapi.com/v1/breeds?limit=10?api_key=d02a85d8-e3dc-4126-a9df-d88199b795f2"); 
+        $dataj = json_decode($data);
+      ?>
+      <?php foreach ($dataj as $i => $value) : ?>
+        <?php 
+          $urlstring = "https://api.thecatapi.com/v1/images/search?breed_id=" . $dataj[$i]->id;
+          $cats = json_decode(file_get_contents($urlstring));
+        ?>
+        <li>
+          <a href="<?php echo "/breed.php?name=" . $cats[0]->breeds[0]->name; ?>">
+            <div>
+              <?php echo $dataj[$i]->name; ?>
+              <img src="<?php echo $cats[0]->url?>" width="100", height="100"> </img>
+            </div>
+          </a>
+        </li>
+      <?php endforeach ?>
+    </ul>
+  </body>
 </html>
