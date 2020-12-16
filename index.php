@@ -13,6 +13,7 @@
         <li>
             <div>
               <?php echo $dataj[$i]->name; ?>
+			  <br>
               <img src="<?php echo $cats[0]->url?>" width="100", height="100"> </img>
             </div>
           </a>
